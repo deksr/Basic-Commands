@@ -105,3 +105,7 @@ command + option + I
 __**To check for the installed package**__:<br>
 Preferences > Package Settings
 
+- - - - - 
+Creating git repos: <br>
+Reference: http://befused.com/git/existing-project-github
+
