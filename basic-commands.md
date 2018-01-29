@@ -106,6 +106,6 @@ __**To check for the installed package**__:<br>
 Preferences > Package Settings
 
 - - - - - 
-Creating git repos: <br>
+__**Creating git repos**__: <br>
 Reference: http://befused.com/git/existing-project-github
 
