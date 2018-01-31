@@ -106,6 +106,11 @@ __**To check for the installed package**__:<br>
 Preferences > Package Settings
 
 - - - - - 
+
+__**Git related notes**__:
+https://github.com/deksr/branchex/blob/master/git-related-notes.txt
+
+- - - - - - 
 __**Creating git repos**__: <br>
 Reference: http://befused.com/git/existing-project-github
 
