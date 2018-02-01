@@ -1,0 +1,9 @@
+	@import url("stylesheet-two.css");
+
+	.sub-title{
+		color: pink;
+	}
+	#paragraph-one{
+		color: red;
+	}
+

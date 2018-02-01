@@ -59,6 +59,7 @@ ctrl + C : Kills whatever is running in the shell.<br>
 press ‘upward’ ⇧ arrow key to execute previous command<br>
 
 
+To open a sublime file and directories from terminal type in subl.
 
 
 Reference: 
