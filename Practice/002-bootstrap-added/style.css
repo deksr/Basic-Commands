@@ -1,0 +1,35 @@
+.main-paragraph{
+	background-color: #f5faea;
+	color: #7ba428;
+	border-style: dotted;
+	border-color: #e1f0c1;
+  /*	margin: auto;*/	
+  margin: 30px 20px 30px 40px;
+  /* width: 600px;
+	height: 300px;*/
+	padding: 40px;
+
+}
+
+
+.grid-container{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr) ;
+	grid-template-rows: repeat(1, 1fr);
+	grid-gap: 5px;
+}
+
+
+.grid-item{
+	background-color: #f5faea;
+	border: dotted;
+	border-color: #e1f0c1;
+	padding: 20px;
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+
+/*.first-paragraph{
+	padding: 30px;
+}*/
