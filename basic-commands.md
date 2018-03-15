@@ -61,6 +61,8 @@ press ‘upward’ ⇧ arrow key to execute previous command<br>
 
 To open a sublime file and directories from terminal type in subl.
 
+Type q to exit the screen. Type h to get help.
+
 
 Reference: 
 https://github.com/0nn0/terminal-mac-cheatsheet

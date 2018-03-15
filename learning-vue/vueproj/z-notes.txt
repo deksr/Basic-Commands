@@ -1,0 +1,11 @@
+1) created dist folder  for all minified files.
+2) created public folder for index.html
+3) created src for unminified javascript files.
+
+4) Then `npm init` to create `packge.json`.
+5) npm install react, react-dom, react-router-dom etc. (creates node modules along with that)
+
+6) create server.js and confifure the folder etc. and add start script to package.json `"start": "node server.js"`
+
+7)to run server: `npm start`
+
