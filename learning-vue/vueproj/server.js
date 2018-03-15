@@ -8,8 +8,9 @@ var app = express();
 // app.use(express.static('public'));
 
   app.use(express.static('public'));
-  app.use('/dist', express.static('dist'));
-  // app.use('/src/vueJS', express.static('src'));
+  app.use('/src', express.static('src'));
+  // app.use('/dist', express.static('dist'));
+
 
 
 
