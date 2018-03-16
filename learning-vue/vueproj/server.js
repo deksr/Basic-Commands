@@ -14,11 +14,19 @@ var app = express();
 
 
 
+// app.use is when a middlewear needs to be used. app.get is when there is requests like `get`. 
 
-app.use('/', function (req, res) {
+app.get('/', function (req, res) {
     // res.sendFile(path.resolve('client/index.html'));
     // res.sendFile(path.resolve('public/index.html'));
       res.sendFile(path.resolve('index.html'));
+});
+
+
+app.get('/startdesign', function (req, res) {
+    // res.sendFile(path.resolve('client/index.html'));
+    // res.sendFile(path.resolve('public/index.html'));
+      res.sendFile(__dirname + '/public/vue-index.html');
 });
 
 
