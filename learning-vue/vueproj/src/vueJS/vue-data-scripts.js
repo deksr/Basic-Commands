@@ -15,3 +15,12 @@ var vm = new Vue({
   data: obj
 })
 
+
+
+new Vue({
+  el: '#app-render-two-a',
+  data: {
+    checkedItem: []
+  }
+})
+
