@@ -8,23 +8,32 @@
 </head>
 <body>
 
-	<div id="app">
+	<div id="app-render-one">
 
-	<h1>Hello App!</h1>
+		<h1>Hello App!</h1>
 
-	<a href="/"> Home </a>
+		<a href="/"> Home </a>
 
-  <p>
-    <router-link to="/startdesign/foo">Go to Foo</router-link>
-    <router-link to="/startdesign/bar">Go to Bar</router-link>
-    <router-link to="/startdesign/shop">Go to Shop</router-link>
+	  <p>
+	    <router-link to="/startdesign/foo">Go to Foo</router-link>
+	    <router-link to="/startdesign/bar">Go to Bar</router-link>
+	    <router-link to="/startdesign/shop">Go to Shop</router-link>
 
-  </p>
-  
-  <router-view></router-view>
+	  </p>
+	  
+	  <router-view></router-view>
 
 
-</div>
+  </div>
+
+  <br><br><br>
+
+
+	<div id="app-render-two">
+		<li v-for="item in items">
+      {{ item.a }}
+    </li>
+	</div>
 
 
 
@@ -32,6 +41,8 @@
 <script src="src/minified/vue-router.js" > </script>
 
 <script src="src/vueJS/vue-related-scripts.js"> </script>
+<script src="src/vueJS/vue-data-scripts.js"> </script>
+
 	
 </body>
 </html>

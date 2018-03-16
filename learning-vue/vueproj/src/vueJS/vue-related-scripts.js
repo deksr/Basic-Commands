@@ -14,6 +14,8 @@ var Shop = {
 }
 
 
+
+// ************************************************************************
 // routes
 var routes = [
   { path: '/startdesign/foo', 
@@ -28,18 +30,17 @@ var routes = [
 ]
 
 
-
+// ************************************************************************
 var router = new VueRouter({
   routes // short for `routes: routes`
 
 })
 
 
-
-
+// ************************************************************************
 // Create and mount the root instance
 var app = new Vue({
   router
-}).$mount('#app')
+}).$mount('#app-render-one')
 
 
