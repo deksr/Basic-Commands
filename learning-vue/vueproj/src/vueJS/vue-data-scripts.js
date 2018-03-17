@@ -24,3 +24,11 @@ new Vue({
   }
 })
 
+
+new Vue({
+  el: '#app-render-two-b',
+  data: {
+    picked: []  
+  }
+})
+
