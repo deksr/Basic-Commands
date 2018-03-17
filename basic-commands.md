@@ -20,6 +20,8 @@ __**Create a folder and file**__:<br>
 mkdir folderA<br>
 touch file.txt
 
+mkdir dir1 && cd dir1
+
 
 __**Move a file to different folder**__:<br>
 mv fileA.txt folderA (this moves a file within the same directory)<br>
@@ -62,6 +64,7 @@ press ‘upward’ ⇧ arrow key to execute previous command<br>
 To open a sublime file and directories from terminal type in subl.
 
 Type q to exit the screen. Type h to get help.
+
 
 
 Reference: 
