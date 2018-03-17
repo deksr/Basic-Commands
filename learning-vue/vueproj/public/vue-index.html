@@ -4,16 +4,15 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
-	<link rel="stylesheet" href="">
-	<style type="text/css"> </style>
+	<link rel="stylesheet" href="src/css/style.css">
+	
 </head>
 <body>
 
 	<div id="app-render-one">
 
-		<h1>Hello App!</h1>
 
-		<a href="/"> Home </a>
+		<a class ="home-tag"href="/"> Home </a>
 
 	  <p>
 	    <router-link to="/startdesign/foo">Go to Foo</router-link>
@@ -29,12 +28,18 @@
 
   <br><br><br>
 
+	<!-- ***********************************************-->
+
+<!-- v-for directive -->
+<!-- Mustache syntax for data binding -->
 
 	<div id="app-render-two">
-		<li v-for="item in items">
-      {{ item.a }}
+		<li v-for="item in items"> 
+      {{ item.a }}  
     </li>
 	</div>
+
+	<!-- ***********************************************-->
 
 
 
@@ -52,10 +57,10 @@
 
 	<br><br>
 
-	<!-- ***********************************************-->
+	
+<!-- ***********************************************-->
 
-
-	<div id='app-render-two-b' >
+	<div id='app-render-two-b'>
 
 		<input type="radio" id="one" value="One" v-model="picked">
       <label for="one">One</label>
@@ -63,8 +68,16 @@
     <input type="radio" id="two" value="Two" v-model="picked">
     <label for="two">Two</label>
     <br>
-    <span>Picked: {{ picked }}</span>
+
+    <p class="fade">
+      <span >Picked: <span class="add-color">{{ picked }}</span></span>
+    </p>
+
 	</div>
+
+<!-- ***********************************************-->
+
+
 
 
 
