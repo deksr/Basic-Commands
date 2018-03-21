@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.home-page-link{
+	text-decoration:none
+}
+
+
+
+
+
+
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  body {
+    /*background-color: #ffef96;*/ /* Blue  */
+  background-color: #FB393C; /* Blue  */
+/*  background: radial-gradient(circle, #FB393C, #E22029)*/
+ }
+
+
+
+  .main-webpage-div{
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+/*    background-color: green;
+*/
+  }
+
+
+  /*******all button style*******/
+/*	.all-buttons-div{
+		display:inline-block;
+	}*/
+
+
+
+	button{
+		margin: 40px;
+	}
+
+
+
+
+	button:focus {
+		outline:0;
+	}
+
+
+
+	.button-style{
+		border: 1px solid;
+		border-style: none;
+		padding: 34px 58px;
+		font-size: 16px;
+		color:#EE2B29;
+  	transition: 0.3s;
+		opacity: 10;
+		font-size: 100%;
+    cursor: pointer;
+	}
+
+
+
+
+
+	.button-style:hover {
+	  background-color: #83d0c9;
+	  color: white;
+	  opacity:0.75;
+	}
+
+
+  /********styles related squarecard and round cards********/	
+
+
+
+  .attach-cards-div{
+/*	 	background-color: red;*/	 	
+    height: 300px;
+	 	width: 100%;
+	 	margin: auto;
+	 	text-align: center;
+
+	}
+
+
+
+  .square-card-style {
+    padding: 25px;
+    height:270px;
+    width: 270px;
+    background-color: coral;    
+    color: white;
+    box-sizing: border-box;
+    border: 1px solid #DCDCDC;
+    display:inline-block;
+    margin: 20px;
+    cursor: pointer;
+
+
+  }
+
+
+
+
+
+  .border-radius-card-style {
+    padding: 25px;
+    height:270px;
+    width: 270px;
+    background-color: coral;    
+    color: white;
+    box-sizing: border-box;
+    border: 1px solid #DCDCDC;
+    border-radius: 25px;
+    display:inline-block;
+    margin: 60px;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+}
