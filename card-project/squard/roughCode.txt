@@ -1,0 +1,329 @@
+// ********************************************************
+  var PiickACardButton= document.getElementsByClassName("buttonClass");
+  var pick= document.getElementById("pick");
+  var create= document.getElementById("create");
+  var print= document.getElementById("print");
+
+
+
+
+  var attachCardsDiv = document.createElement("div");
+		attachCardsDiv.className += "attach-cards-div"// main div don't touch
+
+		var classADiv = document.createElement("div");
+		classADiv.className += "classA" 
+
+    var classBDiv = document.createElement("div");
+		classBDiv.className += "classB" 
+
+    var squareMain = document.createElement("div");
+    squareMain.className = "squareMain cardsPanel";
+    squareMain.setAttribute("id", "squareMainID");
+
+    var roundMain = document.createElement("div");
+    roundMain.className = "roundMain cardsPanel";
+    roundMain.setAttribute("id", "roundMainID");
+
+
+    var cardFrontDiv = document.createElement("div");
+	  cardFrontDiv.className += "front"
+
+    var cardBackDiv = document.createElement("div");
+		cardBackDiv.className += "back"
+
+
+
+
+
+
+// **************************functions******************************
+
+
+  function disableButton(){
+		pick.disabled = true;//disable the pick button
+	  console.log("two others Button have been disabled.");
+  }
+
+
+  function attachTwoCardsOnDom(){
+    var array = [ roundMain, squareMain ]
+	  var stylenames = ["square-card-style", "border-radius-card-style"]
+
+		for (var i = 0; i < array.length; i++) {
+			for (var i = 0; i < stylenames.length; i++) {
+				classBDiv.appendChild(cardBackDiv);
+			  classBDiv.appendChild(cardFrontDiv);
+	      // squareCardDiv.appendChild(textContent);
+			  classADiv.appendChild(classBDiv).addEventListener('click', function(event){
+			console.log("clicked");
+		});
+			  array[i].appendChild(classADiv);
+			  array[i].classList.add(stylenames[i]);
+
+			  attachCardsDiv.appendChild(array[i]);
+			  document.body.appendChild(attachCardsDiv);				
+			};
+		};
+
+	}
+
+
+
+	function detectClassOnDom(){
+		var picksquaretag= document.querySelectorAll(".roundMain");
+		console.log(picksquaretag)
+	}
+
+
+
+  function flipStyle(){ //adds flip css style to dom
+		var styleSheet = document.createElement('style');
+	  styleSheet.innerHTML = "body{background-color: blue}";
+	  document.body.appendChild(styleSheet);	     
+  }
+
+
+
+
+
+  function rotateButton(){ //this function goes inside removeCardFromDom function
+	  var createrotatebutton = document.createElement("button");
+		var buttonText = document.createTextNode("Rotate");
+	  createrotatebutton.classList.add("rotate-button-class");
+	  createrotatebutton.appendChild(buttonText);
+	  attachCardsDiv.appendChild(createrotatebutton)
+	  document.body.appendChild(attachCardsDiv);
+
+	  createrotatebutton.addEventListener('click', function(event){
+	  	console.log("hello rotate button clicked");
+	  	flipStyle();
+	  })
+  }
+
+
+
+
+
+			
+	function removeCardFromDom(){
+		var getCardsPanel = document.getElementsByClassName("cardsPanel");
+  	for (var i = 0; i < getCardsPanel.length; i++) {
+  		console.log(getCardsPanel[i]);
+
+	  	getCardsPanel[i].addEventListener('click', function(event){
+				console.log("clicked");
+			  var squareClick =  document.getElementById("squareMainID");
+				var roundClick =  document.getElementById("roundMainID");
+				if(event.target === squareClick){
+					console.log("squareMain clicked")
+					roundClick.remove();
+					rotateButton()	
+				}
+				if(event.target === roundClick){
+					console.log("roundMain clicked");
+					squareClick.remove();
+					rotateButton()
+				}
+			});
+  	};
+  } 
+
+  
+  
+
+
+
+
+// **************************main recipe******************************
+
+
+  for (var i = 0; i < PiickACardButton.length; i++) {
+
+  	PiickACardButton[i].addEventListener('click', function(event){		
+			
+
+			if(event.target === create || event.target === print){
+				console.log("pick a card first");
+				//add popup
+			}
+			else
+			{
+				disableButton();	
+				if(pick.disabled = true){
+					create.disabled = true;
+					print.disabled = true;
+					console.log("disable create button or print button");
+					attachTwoCardsOnDom();
+					detectClassOnDom();//detecting
+					removeCardFromDom();
+				}
+			}
+
+	  })
+  };
+
+
+
+working code is above
+
+
+// **********************human example**********************************
+
+  // var human = document.getElementById('human')
+var grabhand = document.querySelectorAll('.hand');
+var classnames= ["red", "green"]
+
+for (var i = 0; i < grabhand.length; i++) {
+	for (var i = 0; i < classnames.length; i++) {
+		console.log(grabhand[i]);
+		console.log(classnames[i]);
+
+		grabhand[i].classList.add(classnames[i]);
+		document.body.appendChild(grabhand[i]);		
+	};
+};
+
+
+
+
+
+
+
+
+
+
+// **********************rough rough rough rough**********************************
+
+
+//   var basketClass= document.getElementsByClassName("basketClass"); 
+//   var basketOne= document.getElementById("basketOne"); //roundMain
+//   var basketTwo= document.getElementById("basketTwo"); //squareMain
+
+
+
+//   for (var i = 0; i < basketClass.length; i++) {
+// 	basketClass[i].addEventListener('click', function(event){
+// 		if(event.target === basketOne){
+// 		  console.log("basketOneclicked");
+// 		  basketTwo.remove();
+// 		  rotateButton()
+// 		  // flipStyle()
+
+// 		  // add flip stylesheet to dom
+// 	  }
+
+// 	  if(event.target === basketTwo){
+// 	  	console.log("basketTwoclicked");
+//       basketOne.remove();
+//       rotateButton()
+//       flipStyle()
+//       // add flip stylesheet to dom
+
+// 	  }
+//   })
+// };
+
+
+// ***********************new work*************************
+// var fruit= document.getElementsByClassName("fruit"); 
+// var apple= document.getElementById("apple");
+// var banana= document.getElementById("banana");
+// var grapes= document.getElementById("grapes");
+
+
+
+// var basketOne= document.getElementById("basketOne");
+// var basketTwo= document.getElementById("basketTwo");
+
+
+
+
+// function disableButton(){
+// 	apple.disabled = true;//disable the apple button
+//   console.log("apple Button has been disabled.");
+// }
+
+
+// function rotateButton(){ //rotatebutton with the name `Rotate`
+// 	var clickMeButtonDiv = document.getElementById("clickMeButtonDiv")
+// 	var createrotatebutton = document.createElement("button");
+// 	var buttonText = document.createTextNode("Rotate");
+//   createrotatebutton.classList.add("rotate-button-class");
+//   createrotatebutton.appendChild(buttonText);
+//   clickMeButtonDiv.appendChild(createrotatebutton);
+//   document.body.appendChild(clickMeButtonDiv);
+// }
+
+
+
+
+// function flipStyle(){ //adds flip css style to dom
+// 	var styleSheet = document.createElement('style')
+//   styleSheet.innerHTML = ".front{ background-color: yellow; width: 50px; height: 50px; cursor: pointer;} .back{ background-color: orange; width: 50px; height: 50px; cursor: pointer;} .classA { perspective: 1000px; } .classA:hover .classB {transform: rotateY(-180deg);} .classA, .front, .back {width: 100px; height: 100px; } .classB {transition: 0.6s; transform-style: preserve-3d; position: relative;} .front, .back { backface-visibility: hidden; position: absolute; top: 0;left: 0;} .front{ z-index: 10; transform: rotateY(0deg);} .back { transform: rotateY(-180deg);}";
+//    document.body.appendChild(styleSheet);
+// }
+
+
+
+
+
+// for (var i = 0; i < fruit.length; i++) {
+// 	fruit[i].addEventListener('click', function(e){
+// 		// console.log("hello you may have clicked apple or babana button");
+		
+// 		if(event.target === banana || event.target === grapes){
+// 			console.log("please click apple first");
+
+// 		}
+// 		else{
+// 			disableButton()	
+// 			if(apple.disabled= true){
+// 				banana.disabled = true;
+// 				grapes.disabled = true
+// 				console.log("disable banana button")
+// 			}
+// 		}
+
+// 	})
+// };
+
+
+
+
+
+// var basketOne= document.getElementById("basketOne");
+// var basketTwo= document.getElementById("basketTwo");
+
+// var basketClass= document.getElementsByClassName("basketClass"); 
+// for (var i = 0; i < basketClass.length; i++) {
+// 	basketClass[i].addEventListener('click', function(event){
+// 		if(event.target === basketOne){
+// 		  console.log("basketOneclicked");
+// 		  basketTwo.remove();
+// 		  rotateButton()
+// 		  // flipStyle()
+
+// 		  // add flip stylesheet to dom
+// 	  }
+
+// 	  if(event.target === basketTwo){
+// 	  	console.log("basketTwoclicked");
+//       basketOne.remove();
+//       rotateButton()
+//       flipStyle()
+//       // add flip stylesheet to dom
+
+// 	  }
+//  })
+// };
+
+
+
+		   // add flip
+		  // insert input tags;
+		  // add draggable
+		  // add image upload   
+
+
+
+
