@@ -123,9 +123,9 @@ Reference: http://befused.com/git/existing-project-github
 
 - - - - 
 __**Visual studio:**__: <br>
-command + p
-type >
-select 'preference: color theme'
-select 'theme'
+command + p<br>
+type > <br>
+select 'preference: color theme' <br>
+select 'theme'<br>
 
 
