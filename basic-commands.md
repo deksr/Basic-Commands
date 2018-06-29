@@ -120,3 +120,12 @@ https://github.com/deksr/branchex/blob/master/git-related-notes.txt
 __**Creating git repos**__: <br>
 Reference: http://befused.com/git/existing-project-github
 
+
+- - - - 
+Visual studio:
+command + p
+type >
+select 'preference: color theme'
+select 'theme'
+
+
