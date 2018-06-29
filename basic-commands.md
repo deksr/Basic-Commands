@@ -122,7 +122,7 @@ Reference: http://befused.com/git/existing-project-github
 
 
 - - - - 
-__**Visual studio:**__: <br>
+__**Visual studio**__: <br>
 command + p<br>
 type > <br>
 select 'preference: color theme' <br>
