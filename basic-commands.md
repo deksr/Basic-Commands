@@ -44,6 +44,14 @@ __**Copy a file**__:<br>
 cp fileA folderA<br>
 
 
+__**To copy a folder in the same folder and rename it**__:<br>
+cp folderA  folderB <br>
+cp folderA ./folderB
+
+__**To copy a folder to a different destination**__:<br>
+cp folderA  destination directory/ foldername/
+
+
 __**To view a file in terminal**__:<br>
 cat file.txt
 
